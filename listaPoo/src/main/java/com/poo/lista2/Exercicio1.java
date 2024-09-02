@@ -6,6 +6,10 @@ public class Exercicio1 {
 
     public static void resolucao() {
 
+        // 1) Escreva um programa que recebe um número digitado pelo usuário e responda
+        // se o número inserido é par ou ímpar ou 0.
+
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite um número: ");
@@ -24,5 +28,4 @@ public class Exercicio1 {
         sc.close();
         
     }
-
 }
