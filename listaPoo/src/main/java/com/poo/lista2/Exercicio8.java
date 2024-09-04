@@ -25,6 +25,9 @@ public class Exercicio8 {
         if(liberta != 2){
             cont++;
         }
+
+
+        // teste
         
         System.out.println("Qual maior jogador da história do futebol? ");
         System.out.println("1- Maradona");
