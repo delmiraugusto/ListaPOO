@@ -6,6 +6,9 @@ public class Exercicio2 {
 
     public static void resolucao(){
 
+        // 2) Desenvolva um programa que receba um número do usuário e escreva a
+        // tabuada dele.
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite um número: ");
