@@ -1,6 +1,7 @@
 package com.poo.lista4;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,7 +23,8 @@ public class Exercicio8 {
     
 
         do{
-            System.out.println("Inserir um item e o Preco - 1, Ver a lista - 2, Remover item - 3, Finalizar Programa - 4");
+            System.out.println("Inserir um item e o Preco - 1, Ver a lista - 2, Remover item - 3, Finalizar Programa - 4, Imprimir por Preco - 5");
+
             codigo = sc.nextInt();
             sc.nextLine();
 
@@ -60,6 +62,26 @@ public class Exercicio8 {
                 case 4:
                     System.out.println("Programa Finalizado");
                     break;
+                    case 5:
+                    if (lista.isEmpty()) {
+                        System.out.println("Lista está vazia");
+                    } else {
+                        List<Integer> indices = new ArrayList<>();
+                        for (int i = 0; i < valor.size(); i++) {
+                            indices.add(i);
+                        }
+                        indices.sort(new Comparator<Integer>() {
+                            public int compare(Integer i1, Integer i2) {
+                                return valor.get(i1).compareTo(valor.get(i2));
+                            }
+                        });
+                        System.out.println("Lista ordenada por preço:");
+                        for (Integer i : indices) {
+                            System.out.println(lista.get(i) + " - " + valor.get(i));
+                        }
+                    }
+                    break;
+                
                 default:
                     System.out.println("Numero Invalido!");
                     break;
